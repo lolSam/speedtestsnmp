@@ -12,8 +12,10 @@ s.results.share()
 # Convert to a dict 
 result_dict = s.results.dict()
 
-# Grab result and convert from bit/s to megabit/s
-result = result_dict["download"] / 1048576
+# Grab result and convert from bit/s to megabit/s to the precision of 2s
+result = "{:.2f}".format(result_dict["download"] / 1048576)
 
-# Print resulting to the precision of 2 decimal places
-print("%.2f" % result)
+# save result to file
+file = open('download_result', 'w')
+file.write(result)
+file.close()
