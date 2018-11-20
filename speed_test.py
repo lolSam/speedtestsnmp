@@ -57,6 +57,6 @@ def run_loop(interval):
 		download_test()
 		upload_test()
 		print("Speed test ran")
-		time.sleep(5)
+		time.sleep(interval)
 
-run_loop(5)
+run_loop(300)
