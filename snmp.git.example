@@ -1,8 +1,0 @@
-agentAddress udp:161,udp6:[::1]:161
-view   all         included   .1                80
-rocommunity public default    -V all
-
-
-## Extend speedtest results ##
-extend .1.3.6.1.4.1.50083.100.4.1.1.1.7.1 speedtest /bin/cat /home/speedtest/speedtestsnmp/download_result iso.3.6.1.4.1.50083.100.4.1.1.1.7.1
-extend .1.3.6.1.4.1.50083.100.4.1.1.1.7.2 speedtest /bin/cat /home/speedtest/speedtestsnmp/upload_result iso.3.6.1.4.1.50083.100.4.1.1.1.7.2
