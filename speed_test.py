@@ -1,6 +1,7 @@
 import speedtest
 import pathlib
 import os
+import time
 
 def download_test():
 
@@ -50,7 +51,12 @@ def upload_test():
 	file.write(result)
 	file.close()
 
-download_test()
-upload_test()
 
-print("Speed test ran")
+def run_loop(interval):
+	while True:
+		download_test()
+		upload_test()
+		print("Speed test ran")
+		time.sleep(5)
+
+run_loop(5)
